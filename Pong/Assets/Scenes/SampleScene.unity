@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
-  rb: {fileID: 487056335}
+  Player2: {fileID: 720333075}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed;
     private Vector3 moveVector;
-    public Rigidbody2D rb;
+    public GameObject Player2;
     
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-
             transform.position += moveVector;
+            Player2.gameObject.transform.position -= moveVector;
         }
         if (Input.GetKey(KeyCode.S))
         {
-
             transform.position -= moveVector;
+            Player2.gameObject.transform.position += moveVector;
         }
     }
 }
