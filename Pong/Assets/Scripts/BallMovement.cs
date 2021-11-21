@@ -9,12 +9,27 @@ public class BallMovement : MonoBehaviour
 {
     public float speed;
     public Text lives;
+    public GameObject Player;
 
     public Rigidbody2D rb;
+    private Vector3 start;
     private Vector2 moveVector;
     
     // Start is called before the first frame update
     void Start()
+    {
+        start = transform.position;
+        StartMoving();
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void StartMoving()
     {
         float x = Random.Range(0, 2);
         float y = Random.Range(0, 2);
@@ -36,14 +51,7 @@ public class BallMovement : MonoBehaviour
             y = 1;
         }
         moveVector = new Vector2(x * speed, y * speed);
-
         rb.velocity = moveVector;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -56,6 +64,14 @@ public class BallMovement : MonoBehaviour
             {
                 lives.text = playerLives.ToString();
             }
+            Reset();
+            Player.GetComponent<PlayerMovement>().Reset();
         }
+    }
+    
+    public void Reset()
+    {
+        transform.position = start;
+        StartMoving();
     }
 }
