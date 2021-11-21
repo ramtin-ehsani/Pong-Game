@@ -65,7 +65,7 @@ public class BallMovement : MonoBehaviour
             if (playerLives > 0)
             {
                 lives.text = playerLives.ToString();
-                Reset();
+                StartCoroutine(WaitBeforeRestart());
                 Player.GetComponent<PlayerMovement>().Reset();
             }
             else
@@ -75,6 +75,12 @@ public class BallMovement : MonoBehaviour
                 lives.text = playerLives.ToString();
             }
         }
+    }
+    
+    IEnumerator WaitBeforeRestart()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Reset();
     }
     
     public void Reset()
