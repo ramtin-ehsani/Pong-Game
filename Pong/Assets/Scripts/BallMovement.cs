@@ -10,6 +10,7 @@ public class BallMovement : MonoBehaviour
     public float speed;
     public Text lives;
     public GameObject Player;
+    public GameObject lostPanel;
 
     public Rigidbody2D rb;
     private Vector3 start;
@@ -69,6 +70,7 @@ public class BallMovement : MonoBehaviour
             else
             {
                 Debug.Log("lost!");
+                lostPanel.SetActive(true);
                 lives.text = playerLives.ToString();
             }
         }
