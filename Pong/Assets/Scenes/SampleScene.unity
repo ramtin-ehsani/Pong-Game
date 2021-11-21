@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d8c677dd014bf48a76366b77bfd00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.031
+  speed: 0.03
   Player2: {fileID: 720333075}
 --- !u!1 &519420028
 GameObject:
@@ -1493,7 +1493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -70}
+  m_AnchoredPosition: {x: 0, y: -116}
   m_SizeDelta: {x: 258.49347, y: 70.76821}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394215975
@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813107795cce92b4bbf194c8f669f03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5.4
+  speed: 5
   lives: {fileID: 1394215975}
   Player: {fileID: 487056331}
   lostPanel: {fileID: 1865235470}
