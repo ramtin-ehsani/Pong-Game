@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class BallMovement : MonoBehaviour
 {
     public float speed;
+    public Text lives;
 
     public Rigidbody2D rb;
     private Vector2 moveVector;
@@ -40,5 +44,18 @@ public class BallMovement : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag(TagNames.Tags.Net.ToString()))
+        {
+            Debug.Log("goal!");
+            int playerLives = int.Parse(lives.text) - 1;
+            if (playerLives > 0)
+            {
+                lives.text = playerLives.ToString();
+            }
+        }
     }
 }
