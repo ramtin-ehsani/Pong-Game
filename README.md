@@ -1,4 +1,4 @@
-# Pong-Game
+# Pong Game
 Pong game developed with Unity2D
 
 ## How to play
