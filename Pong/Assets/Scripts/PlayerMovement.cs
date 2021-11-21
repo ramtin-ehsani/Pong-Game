@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    [Range(0.0f, 10.0f)]
     public float speed;
     private Vector3 moveVector;
     private Vector3 start;

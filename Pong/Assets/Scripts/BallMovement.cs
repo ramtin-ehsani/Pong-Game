@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class BallMovement : MonoBehaviour
 {
+    [Range(0.0f, 10.0f)]
     public float speed;
     public Text lives;
     public GameObject Player;
