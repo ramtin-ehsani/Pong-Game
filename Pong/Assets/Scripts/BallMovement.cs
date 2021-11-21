@@ -63,9 +63,14 @@ public class BallMovement : MonoBehaviour
             if (playerLives > 0)
             {
                 lives.text = playerLives.ToString();
+                Reset();
+                Player.GetComponent<PlayerMovement>().Reset();
             }
-            Reset();
-            Player.GetComponent<PlayerMovement>().Reset();
+            else
+            {
+                Debug.Log("lost!");
+                lives.text = playerLives.ToString();
+            }
         }
     }
     
